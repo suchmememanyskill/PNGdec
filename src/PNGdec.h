@@ -147,7 +147,7 @@ typedef struct png_image_tag
     PNG_DRAW_CALLBACK *pfnDraw;
     PNG_CLOSE_CALLBACK *pfnClose;
     PNGFILE PNGFile;
-    uint8_t ucZLIB[32768 + sizeof(inflate_state)]; // put this here to avoid needing malloc/free
+    uint8_t ucZLIB[16384 + sizeof(inflate_state)]; // put this here to avoid needing malloc/free
     uint8_t ucPalette[1024];
     uint8_t ucPixels[PNG_MAX_BUFFERED_PIXELS * 2];
     uint8_t ucFileBuf[PNG_FILE_BUF_SIZE]; // holds temp file data

@@ -134,7 +134,7 @@ z_streamp strm;
     state->mode = HEAD;
     state->last = 0;
     state->havedict = 0;
-    state->dmax = 32768U;
+    state->dmax = 16384U;
     state->head = Z_NULL;
     state->hold = 0;
     state->bits = 0;

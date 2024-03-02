@@ -60,7 +60,7 @@ int stream_size;
     if (state == Z_NULL) return Z_MEM_ERROR;
     Tracev((stderr, "inflate: allocated\n"));
     strm->state = (struct internal_state FAR *)state;
-    state->dmax = 32768U;
+    state->dmax = 16384U;
     state->wbits = (uInt)windowBits;
     state->wsize = 1U << windowBits;
     state->window = window;
